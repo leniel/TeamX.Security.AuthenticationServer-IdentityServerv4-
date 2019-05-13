@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @HttpContext.User.Identity.Name</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-8">
+        <p>
+            IdentityServer publishes a
+            <a href="~/.well-known/openid-configuration">discovery document</a>
+            where you can find metadata and links to all the endpoints, key material, etc.
+        </p>
+    </div>
+    <div class="col-sm-8">
+        <p>
+            Click <a href="~/grants">here</a> to manage your stored grants.
+        </p>
+    </div>
+</div>
